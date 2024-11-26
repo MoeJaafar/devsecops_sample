@@ -82,5 +82,4 @@ jobs:
           target: 'http://localhost:8000'
           docker_name: 'zaproxy/zap-stable'
           cmd_options: '-a'
-        env:
-          ZAP_AUTH_HEADER: ''
+          allow_issue_writing: false
