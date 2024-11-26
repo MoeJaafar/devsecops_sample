@@ -77,8 +77,8 @@ jobs:
 
     - name: Run OWASP ZAP DAST Scan
       run: |
-        docker pull owasp/zap2docker-stable
-        docker run --rm -v $(pwd):/zap/wrk:rw owasp/zap2docker-stable zap-baseline.py \
+        docker pull zaproxy/zap-bare
+        docker run --rm -v $(pwd):/zap/wrk/:rw zaproxy/zap-bare zap-baseline.py \
             -t http://localhost:8000 \
             -r zap-report.html
 
